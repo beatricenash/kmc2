@@ -26,7 +26,6 @@ import Cython
 from Cython.Build import cythonize
 
 module1 = Extension('kmc2', sources=['kmc2.pyx'],
-                    extra_compile_args=['-O3'],
                     include_dirs=[".", np.get_include()],
                     language_level="3")
 setup(
