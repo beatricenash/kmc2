@@ -22,8 +22,12 @@
 # import numpy as np
 import numpy as np
 from setuptools import setup, Extension
+import Cython
+from Cython.Build import cythonize
 
-module1 = Extension('kmc2', sources=['kmc2.pyx'],,include_dirs=[".", np.get_include()],
+module1 = Extension('kmc2', sources=['kmc2.pyx'],
+                    extra_compile_args=['-O3'],
+                    include_dirs=[".", np.get_include()],
                     language_level="3")
 setup(
     name='kmc2',
