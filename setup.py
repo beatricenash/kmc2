@@ -45,5 +45,6 @@ setup(
     ],
     keywords='machine learning clustering kmeans',
     install_requires=["numpy", "scipy", "scikit-learn", "nose"],
-    ext_modules=[module1],
-    include_dirs=[".",np.get_include() ])
+    #ext_modules=[module1],
+    ext_modules=cythonize(module1)
+)
