@@ -25,9 +25,9 @@ from setuptools import setup, Extension
 import Cython
 from Cython.Build import cythonize
 
-# module1 = Extension('kmc2', sources=['kmc2.pyx'],
-#                     include_dirs=[".", np.get_include()],
-#                     language_level="3")
+module1 = Extension('kmc2', sources=['kmc2.pyx'],
+                    include_dirs=[".", np.get_include()],
+                    language_level="3", zip_safe=False)
 setup(
     name='kmc2',
     version='0.1',
@@ -46,5 +46,5 @@ setup(
     keywords='machine learning clustering kmeans',
     install_requires=["numpy", "scipy", "scikit-learn", "nose"],
     #ext_modules=[module1],
-    ext_modules=cythonize("kmc2.pyx",language_level="3")
+    ext_modules=cythonize(module1)
 )
