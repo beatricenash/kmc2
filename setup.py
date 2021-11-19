@@ -46,5 +46,5 @@ setup(
     keywords='machine learning clustering kmeans',
     install_requires=["numpy", "scipy", "scikit-learn", "nose"],
     #ext_modules=[module1],
-    ext_modules=cythonize('kmc2', sources=['kmc2.pyx'], include_dirs=[".", np.get_include()])
+    ext_modules=cythonize("kmc2.pyx")
 )
