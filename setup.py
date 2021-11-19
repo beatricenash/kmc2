@@ -23,7 +23,7 @@
 import numpy as np
 from setuptools import setup, Extension
 
-module1 = Extension('kmc2', sources=['kmc2.c'],include_dirs=[".", np.get_include()],
+module1 = Extension('kmc2', sources=['kmc2.pyx'],,include_dirs=[".", np.get_include()],
                     language_level="3")
 setup(
     name='kmc2',
